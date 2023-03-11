@@ -19,22 +19,22 @@ func New{{title .Alias}}Usecase({{.Alias}}Repo domain.{{title .Alias}}Repository
 	}
 }
 
-func (u *{{.Alias}}Usecase) Get(ctx context.Context, {{.Alias}} *{{title .Alias}}) (err error) {
+func (u *{{.Alias}}Usecase) Get(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}) (err error) {
 	err = u.{{.Alias}}Repo.Get(ctx, {{.Alias}})
 	return
 }
 
-func (u *{{.Alias}}Usecase) GetList(ctx context.Context, {{.Alias}} *{{title .Alias}}) (list []*{{title .Alias}}, err error) {
+func (u *{{.Alias}}Usecase) GetList(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}) (list []*domain.{{title .Alias}}, err error) {
 	list, err = u.{{.Alias}}Repo.GetList(ctx, {{.Alias}})
 	return
 }
 
-func (u *{{.Alias}}Usecase) Create(ctx context.Context, {{.Alias}} *{{title .Alias}}) (err error) {
+func (u *{{.Alias}}Usecase) Create(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}) (err error) {
 	err = u.{{.Alias}}Repo.Create(ctx, {{.Alias}})
 	return
 }
 
-func (u *{{.Alias}}Usecase) Update(ctx context.Context, {{.Alias}} *{{title .Alias}}, condition *{{title .Alias}}) (rows int, err error) {
+func (u *{{.Alias}}Usecase) Update(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}, condition *domain.{{title .Alias}}) (rows int, err error) {
 	rows, err = u.{{.Alias}}Repo.Update(ctx, {{.Alias}}, condition)
 	return
 }`

@@ -21,22 +21,22 @@ func NewMysql{{title .Alias}}Repository() domain.{{title .Alias}}Repository {
 	}
 }
 
-func (m *mysql{{title .Alias}}Repository) Get(ctx context.Context, {{.Alias}} *domain{{title .Alias}}) (err error) {
+func (m *mysql{{title .Alias}}Repository) Get(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}) (err error) {
 	_, err = m.dbEngine.Get({{.Alias}})
 	return
 }
 
-func (m *mysql{{title .Alias}}Repository) GetList(ctx context.Context, {{.Alias}} *domain{{title .Alias}}) (list []*domain{{title .Alias}}, err error) {
+func (m *mysql{{title .Alias}}Repository) GetList(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}) (list []*domain.{{title .Alias}}, err error) {
 	err = m.dbEngine.Find(&list)
 	return
 }
 
-func (m *mysql{{title .Alias}}Repository) Create(ctx context.Context, {{.Alias}} *domain{{title .Alias}}) (err error) {
+func (m *mysql{{title .Alias}}Repository) Create(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}) (err error) {
 	_, err = m.dbEngine.InsertOne({{.Alias}})
 	return
 }
 
-func (m *mysql{{title .Alias}}Repository) Update(ctx context.Context, {{.Alias}} *domain{{title .Alias}}, condition *domain{{title .Alias}}) (int64, error) {
+func (m *mysql{{title .Alias}}Repository) Update(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}, condition *domain.{{title .Alias}}) (int64, error) {
 	rows, err = m.dbEngine.Update({{.Alias}}, condition)
 	return
 }`
