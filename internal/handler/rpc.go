@@ -10,7 +10,7 @@ import (
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/config/cmd"
 	"github.com/micro/go-micro/errors"
-	"github.com/micro/micro/internal/helper"
+	"github.com/weirubo/micro/internal/helper"
 )
 
 type rpcRequest struct {
