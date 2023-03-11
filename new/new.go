@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/micro/cli"
-	tmpl "github.com/micro/micro/internal/template"
-	"github.com/micro/micro/internal/usage"
+	tmpl "github.com/weirubo/micro/internal/template"
+	"github.com/weirubo/micro/internal/usage"
 	"github.com/xlab/treeprint"
 )
 

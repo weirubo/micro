@@ -11,8 +11,8 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/micro/go-micro/util/log"
-	dns "github.com/micro/micro/network/dns/proto/dns"
-	"github.com/micro/micro/network/dns/provider"
+	dns "github.com/weirubo/micro/network/dns/proto/dns"
+	"github.com/weirubo/micro/network/dns/provider"
 )
 
 type cfProvider struct {

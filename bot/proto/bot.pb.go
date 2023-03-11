@@ -216,10 +216,10 @@ var _Command_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "github.com/micro/micro/bot/proto/bot.proto",
+	Metadata: "github.com/weirubo/micro/bot/proto/bot.proto",
 }
 
-func init() { proto.RegisterFile("github.com/micro/micro/bot/proto/bot.proto", fileDescriptor0) }
+func init() { proto.RegisterFile("github.com/weirubo/micro/bot/proto/bot.proto", fileDescriptor0) }
 
 var fileDescriptor0 = []byte{
 	// 241 bytes of a gzipped FileDescriptorProto

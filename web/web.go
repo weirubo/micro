@@ -30,11 +30,11 @@ import (
 	cfstore "github.com/micro/go-micro/store/cloudflare"
 	"github.com/micro/go-micro/sync/lock/memory"
 	"github.com/micro/go-micro/util/log"
-	"github.com/micro/micro/internal/handler"
-	"github.com/micro/micro/internal/helper"
-	"github.com/micro/micro/internal/stats"
-	"github.com/micro/micro/plugin"
 	"github.com/serenize/snaker"
+	"github.com/weirubo/micro/internal/handler"
+	"github.com/weirubo/micro/internal/helper"
+	"github.com/weirubo/micro/internal/stats"
+	"github.com/weirubo/micro/plugin"
 )
 
 var (

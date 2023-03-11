@@ -106,7 +106,7 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("github.com/micro/micro/monitor/proto/monitor.proto", fileDescriptor_e1d38ac8898bbc97)
+	proto.RegisterFile("github.com/weirubo/micro/monitor/proto/monitor.proto", fileDescriptor_e1d38ac8898bbc97)
 }
 
 var fileDescriptor_e1d38ac8898bbc97 = []byte{
@@ -193,5 +193,5 @@ var _Monitor_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "github.com/micro/micro/monitor/proto/monitor.proto",
+	Metadata: "github.com/weirubo/micro/monitor/proto/monitor.proto",
 }

@@ -18,7 +18,7 @@ import (
 	pb "github.com/micro/go-micro/registry/service/proto"
 	"github.com/micro/go-micro/util/backoff"
 	"github.com/micro/go-micro/util/log"
-	rcli "github.com/micro/micro/cli"
+	rcli "github.com/weirubo/micro/cli"
 )
 
 var (

@@ -9,7 +9,7 @@ import (
 
 	"github.com/micro/cli"
 	"github.com/micro/go-micro/registry"
-	"github.com/micro/micro/plugin"
+	"github.com/weirubo/micro/plugin"
 )
 
 func init() {

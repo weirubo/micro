@@ -9,7 +9,7 @@ import (
 	"github.com/micro/cli"
 	goplugin "github.com/micro/go-micro/plugin"
 	"github.com/micro/go-micro/util/log"
-	"github.com/micro/micro/plugin"
+	"github.com/weirubo/micro/plugin"
 )
 
 func build(ctx *cli.Context) {

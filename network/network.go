@@ -25,11 +25,11 @@ import (
 	"github.com/micro/go-micro/tunnel"
 	"github.com/micro/go-micro/util/log"
 	"github.com/micro/go-micro/util/mux"
-	mcli "github.com/micro/micro/cli"
-	"github.com/micro/micro/internal/helper"
-	"github.com/micro/micro/network/api"
-	netdns "github.com/micro/micro/network/dns"
-	"github.com/micro/micro/network/web"
+	mcli "github.com/weirubo/micro/cli"
+	"github.com/weirubo/micro/internal/helper"
+	"github.com/weirubo/micro/network/api"
+	netdns "github.com/weirubo/micro/network/dns"
+	"github.com/weirubo/micro/network/web"
 )
 
 var (

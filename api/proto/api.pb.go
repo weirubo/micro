@@ -215,7 +215,7 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("github.com/micro/micro/api/proto/api.proto", fileDescriptor_api_f8ef31c2e6dafc0b)
+	proto.RegisterFile("github.com/weirubo/micro/api/proto/api.proto", fileDescriptor_api_f8ef31c2e6dafc0b)
 }
 
 var fileDescriptor_api_f8ef31c2e6dafc0b = []byte{

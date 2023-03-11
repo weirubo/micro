@@ -6,9 +6,9 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/util/log"
 
-	"github.com/micro/micro/network/dns/handler"
-	dns "github.com/micro/micro/network/dns/proto/dns"
-	"github.com/micro/micro/network/dns/provider/cloudflare"
+	"github.com/weirubo/micro/network/dns/handler"
+	dns "github.com/weirubo/micro/network/dns/proto/dns"
+	"github.com/weirubo/micro/network/dns/provider/cloudflare"
 )
 
 // Run is the entrypoint for network/dns

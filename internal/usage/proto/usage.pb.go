@@ -148,7 +148,7 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("github.com/micro/micro/internal/usage/proto/usage.proto", fileDescriptor_usage_7cdccb5f3bba2052)
+	proto.RegisterFile("github.com/weirubo/micro/internal/usage/proto/usage.proto", fileDescriptor_usage_7cdccb5f3bba2052)
 }
 
 var fileDescriptor_usage_7cdccb5f3bba2052 = []byte{

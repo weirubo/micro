@@ -14,8 +14,8 @@ import (
 	"github.com/micro/go-micro/runtime"
 	"github.com/micro/go-micro/server"
 	"github.com/micro/go-micro/util/log"
-	"github.com/micro/micro/service/handler/exec"
-	"github.com/micro/micro/service/handler/file"
+	"github.com/weirubo/micro/service/handler/exec"
+	"github.com/weirubo/micro/service/handler/file"
 )
 
 func run(ctx *cli.Context, opts ...micro.Option) {
