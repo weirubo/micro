@@ -277,7 +277,7 @@ func run(ctx *cli.Context) {
 			GoPath:    goPath,
 			Plugins:   plugins,
 			Files: []file{
-				{"main1.go", tmpl.MainSRV},
+				{"app/main.go", tmpl.MainSRV},
 				{"generate.go", tmpl.GenerateFile},
 				{"plugin.go", tmpl.Plugin},
 				{"handler/" + alias + ".go", tmpl.HandlerSRV},
@@ -286,6 +286,7 @@ func run(ctx *cli.Context) {
 				{"Dockerfile", tmpl.DockerSRV},
 				{"Makefile", tmpl.Makefile},
 				{"README.md", tmpl.Readme},
+				{"domain/" + alias + ".go", tmpl.DomainSRV},
 			},
 			Comments: []string{
 				"\ndownload protobuf for micro:\n",
