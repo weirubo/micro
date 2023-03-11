@@ -44,9 +44,9 @@ var (
 	GitTag    string
 	BuildDate string
 
-	name        = "micro"
+	name        = "micro-tool"
 	description = "A microservice runtime"
-	version     = "1.18.0"
+	version     = "1.18.1"
 )
 
 func init() {
