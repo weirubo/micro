@@ -8,32 +8,27 @@ import (
 	"time"
 )
 
-// Article is representing the Article data struct
+// {{title .Alias}} is representing the Article data struct
 type {{title .Alias}} struct {
-	ID        int64 
+	Id        int64 
 	Title     string 
-	Content   string 
 	UpdatedAt time.Time 
 	CreatedAt time.Time 
 }
 
-// ArticleUsecase represent the article's usecases
+// {{title .Alias}}Usecase represent the article's usecases
 type {{title .Alias}}Usecase interface {
-	Fetch(ctx context.Context, cursor string, num int64) ([]{{title .Alias}}, string, error)
-	GetByID(ctx context.Context, id int64) ({{title .Alias}}, error)
-	Update(ctx context.Context, ar *{{title .Alias}}) error
-	GetByTitle(ctx context.Context, title string) ({{title .Alias}}, error)
-	Store(context.Context, *{{title .Alias}}) error
-	Delete(ctx context.Context, id int64) error
+	Get(ctx context.Context, {{.Alias}} *{{title .Alias}}) error
+	GetList(ctx context.Context, {{.Alias}} *{{title .Alias}}) ([]*{{title .Alias}}, error)
+	Create(ctx context.Context, {{.Alias}} *{{title .Alias}}) error
+	Update(ctx context.Context, {{.Alias}} *{{title .Alias}}, condition *{{title .Alias}}) (int, error)
 }
 
-// ArticleRepository represent the article's repository contract
+// {{title .Alias}}Repository represent the article's repository contract
 type {{title .Alias}}Repository interface {
-	Fetch(ctx context.Context, cursor string, num int64) (res []{{title .Alias}}, nextCursor string, err error)
-	GetByID(ctx context.Context, id int64) ({{title .Alias}}, error)
-	GetByTitle(ctx context.Context, title string) ({{title .Alias}}, error)
-	Update(ctx context.Context, ar *{{title .Alias}}) error
-	Store(ctx context.Context, a *{{title .Alias}}) error
-	Delete(ctx context.Context, id int64) error
+	Get(ctx context.Context, {{.Alias}} *{{title .Alias}}) error
+	GetList(ctx context.Context, {{.Alias}} *{{title .Alias}}) ([]*{{title .Alias}}, error)
+	Create(ctx context.Context, {{.Alias}} *{{title .Alias}}) error
+	Update(ctx context.Context, {{.Alias}} *{{title .Alias}}, condition *{{title .Alias}}) (int, error)
 }`
 )

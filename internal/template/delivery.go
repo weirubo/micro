@@ -155,7 +155,7 @@ func (e *{{title .Alias}}) Call(ctx context.Context, req *{{.Alias}}.Request, rs
 }
 
 // Stream is a server side stream handler called via client.Stream or the generated client code
-func (e *{{title .Alias}}) Stream(ctx context.Context, req *{{.Alias}}.StreamingRequest, stream {{.Alias}}.{{title .Alias}}) error {
+func (e *{{title .Alias}}) Stream(ctx context.Context, req *{{.Alias}}.StreamingRequest, stream {{.Alias}}.{{title .Alias}}_StreamStream) error {
 	log.Logf("Received {{title .Alias}}.Stream request with count: %d", req.Count)
 
 	for i := 0; i < int(req.Count); i++ {
@@ -171,7 +171,7 @@ func (e *{{title .Alias}}) Stream(ctx context.Context, req *{{.Alias}}.Streaming
 }
 
 // PingPong is a bidirectional stream handler called via client.Stream or the generated client code
-func (e *{{title .Alias}}) PingPong(ctx context.Context, stream {{.Alias}}.{{title .Alias}}) error {
+func (e *{{title .Alias}}) PingPong(ctx context.Context, stream {{.Alias}}.{{title .Alias}}_PingPongStream) error {
 	for {
 		req, err := stream.Recv()
 		if err != nil {
