@@ -34,5 +34,3 @@ require (
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 	gopkg.in/olivere/elastic.v5 v5.0.82
 )
-
-replace github.com/lucas-clemente/quic-go v0.33.0 => github.com/quic-go/quic-go v0.33.0
