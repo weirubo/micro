@@ -277,7 +277,7 @@ func run(ctx *cli.Context) {
 			GoPath:    goPath,
 			Plugins:   plugins,
 			Files: []file{
-				{"app/main.go", tmpl.MainSRV},
+				{"main1.go", tmpl.MainSRV},
 				{"generate.go", tmpl.GenerateFile},
 				{"plugin.go", tmpl.Plugin},
 				{"handler/" + alias + ".go", tmpl.HandlerSRV},
