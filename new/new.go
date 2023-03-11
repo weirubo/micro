@@ -287,6 +287,7 @@ func run(ctx *cli.Context) {
 				{"Makefile", tmpl.Makefile},
 				{"README.md", tmpl.Readme},
 				{"domain/" + alias + ".go", tmpl.DomainSRV},
+				{alias + "/repository/mysql/mysql_" + alias + ".go", tmpl.RepositoryMysqlSRV},
 			},
 			Comments: []string{
 				"\ndownload protobuf for micro:\n",

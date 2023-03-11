@@ -19,22 +19,22 @@ type {{title .Alias}} struct {
 }
 
 // ArticleUsecase represent the article's usecases
-type {{.Alias}}Usecase interface {
-	Fetch(ctx context.Context, cursor string, num int64) ([]{{.Alias}}, string, error)
-	GetByID(ctx context.Context, id int64) ({{.Alias}}, error)
-	Update(ctx context.Context, ar *{{.Alias}}) error
-	GetByTitle(ctx context.Context, title string) ({{.Alias}}, error)
-	Store(context.Context, *{{.Alias}}) error
+type {{title .Alias}}Usecase interface {
+	Fetch(ctx context.Context, cursor string, num int64) ([]{{title .Alias}}, string, error)
+	GetByID(ctx context.Context, id int64) ({{title .Alias}}, error)
+	Update(ctx context.Context, ar *{{title .Alias}}) error
+	GetByTitle(ctx context.Context, title string) ({{title .Alias}}, error)
+	Store(context.Context, *{{title .Alias}}) error
 	Delete(ctx context.Context, id int64) error
 }
 
 // ArticleRepository represent the article's repository contract
-type {{.Alias}}Repository interface {
-	Fetch(ctx context.Context, cursor string, num int64) (res []{{.Alias}}, nextCursor string, err error)
-	GetByID(ctx context.Context, id int64) ({{.Alias}}, error)
-	GetByTitle(ctx context.Context, title string) ({{.Alias}}, error)
-	Update(ctx context.Context, ar *{{.Alias}}) error
-	Store(ctx context.Context, a *{{.Alias}}) error
+type {{title .Alias}}Repository interface {
+	Fetch(ctx context.Context, cursor string, num int64) (res []{{title .Alias}}, nextCursor string, err error)
+	GetByID(ctx context.Context, id int64) ({{title .Alias}}, error)
+	GetByTitle(ctx context.Context, title string) ({{title .Alias}}, error)
+	Update(ctx context.Context, ar *{{title .Alias}}) error
+	Store(ctx context.Context, a *{{title .Alias}}) error
 	Delete(ctx context.Context, id int64) error
 }`
 )
