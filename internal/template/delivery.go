@@ -135,4 +135,53 @@ func getStatusCode(err error) int {
 		return http.StatusInternalServerError
 	}
 }`
+	DeliveryRpcHandlerSRV = `package rpc
+
+import (
+	"context"
+
+	"github.com/micro/go-micro/util/log"
+
+	{{.Alias}} "{{.Alias}}/proto/{{.Alias}}"
+)
+
+type {{title .Alias}} struct{}
+
+// Call is a single request handler called via client.Call or the generated client code
+func (e *{{title .Alias}}) Call(ctx context.Context, req *{{.Alias}}.Request, rsp *{{.Alias}}.Response) error {
+	log.Log("Received {{title .Alias}}.Call request")
+	rsp.Msg = "Hello " + req.Name
+	return nil
+}
+
+// Stream is a server side stream handler called via client.Stream or the generated client code
+func (e *{{title .Alias}}) Stream(ctx context.Context, req *{{.Alias}}.StreamingRequest, stream {{.Alias}}.{{title .Alias}}) error {
+	log.Logf("Received {{title .Alias}}.Stream request with count: %d", req.Count)
+
+	for i := 0; i < int(req.Count); i++ {
+		log.Logf("Responding: %d", i)
+		if err := stream.Send(&{{.Alias}}.StreamingResponse{
+			Count: int64(i),
+		}); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+// PingPong is a bidirectional stream handler called via client.Stream or the generated client code
+func (e *{{title .Alias}}) PingPong(ctx context.Context, stream {{.Alias}}.{{title .Alias}}) error {
+	for {
+		req, err := stream.Recv()
+		if err != nil {
+			return err
+		}
+		log.Logf("Got ping %v", req.Stroke)
+		if err := stream.Send(&{{.Alias}}.Pong{Stroke: req.Stroke}); err != nil {
+			return err
+		}
+	}
+}
+`
 )

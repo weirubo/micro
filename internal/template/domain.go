@@ -13,7 +13,6 @@ type {{title .Alias}} struct {
 	ID        int64 
 	Title     string 
 	Content   string 
-	Author    Author 
 	UpdatedAt time.Time 
 	CreatedAt time.Time 
 }
