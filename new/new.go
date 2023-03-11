@@ -287,6 +287,7 @@ func run(ctx *cli.Context) {
 				{"Makefile", tmpl.Makefile},
 				{"README.md", tmpl.Readme},
 				{"domain/" + alias + ".go", tmpl.DomainSRV},
+				{"go.mod", tmpl.Module},
 				{alias + "/repository/mysql/mysql_" + alias + ".go", tmpl.RepositoryMysqlSRV},
 				{alias + "/usecase/" + alias + "_usecase.go", tmpl.UsecaseSRV},
 				{alias + "/delivery/http/" + alias + "_handler.go", tmpl.DeliveryHttpHandlerSRV},
