@@ -37,7 +37,7 @@ message Message {
 }
 
 message Request {
-	string name = 1;
+	string id = 1;
 }
 
 message Response {
