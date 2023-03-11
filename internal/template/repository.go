@@ -64,8 +64,8 @@ func (m *mysql{{title .Alias}}Repository) fetch(ctx context.Context, query strin
 }
 
 func (m *mysql{{title .Alias}}Repository) Fetch(ctx context.Context, cursor string, num int64) (res []domain.{{title .Alias}}, nextCursor string, err error) {
-	query := `SELECT id,title,content, author_id, updated_at, created_at
-FROM {{.Alias}} WHERE created_at ? ORDER BY created_at LIMIT ? `
+	query := "SELECT id,title,content, author_id, updated_at, created_at
+FROM {{.Alias}} WHERE created_at ? ORDER BY created_at LIMIT ? "
 
 	decodedCursor, err := repository.DecodeCursor(cursor)
 	if err != nil && cursor != "" {
@@ -84,8 +84,8 @@ FROM {{.Alias}} WHERE created_at ? ORDER BY created_at LIMIT ? `
 	return
 }
 func (m *mysql{{title .Alias}}Repository) GetByID(ctx context.Context, id int64) (res domain.{{title .Alias}}, err error) {
-	query := `SELECT id,title,content, author_id, updated_at, created_at
-FROM {{.Alias}} WHERE ID = ?`
+	query := "SELECT id,title,content, author_id, updated_at, created_at
+FROM {{.Alias}} WHERE ID = ?"
 
 	list, err := m.fetch(ctx, query, id)
 	if err != nil {
@@ -102,8 +102,8 @@ FROM {{.Alias}} WHERE ID = ?`
 }
 
 func (m *mysql{{title .Alias}}Repository) GetByTitle(ctx context.Context, title string) (res domain.{{title .Alias}}, err error) {
-	query := `SELECT id,title,content, author_id, updated_at, created_at
-FROM {{.Alias}} WHERE title = ?`
+	query := "SELECT id,title,content, author_id, updated_at, created_at
+FROM {{.Alias}} WHERE title = ?"
 
 	list, err := m.fetch(ctx, query, title)
 	if err != nil {
@@ -119,7 +119,7 @@ FROM {{.Alias}} WHERE title = ?`
 }
 
 func (m *mysql{{title .Alias}}Repository) Store(ctx context.Context, a *domain.{{title .Alias}}) (err error) {
-	query := `INSERT  {{.Alias}} SET title=? , content=? , author_id=?, updated_at=? , created_at=?`
+	query := "INSERT  {{.Alias}} SET title=? , content=? , author_id=?, updated_at=? , created_at=?"
 	stmt, err := m.Conn.PrepareContext(ctx, query)
 	if err != nil {
 		return
@@ -163,7 +163,7 @@ func (m *mysql{{title .Alias}}Repository) Delete(ctx context.Context, id int64) 
 	return
 }
 func (m *mysql{{title .Alias}}Repository) Update(ctx context.Context, ar *domain.{{title .Alias}}) (err error) {
-	query := `UPDATE {{.Alias}} set title=?, content=?, author_id=?, updated_at=? WHERE ID = ?`
+	query := "UPDATE {{.Alias}} set title=?, content=?, author_id=?, updated_at=? WHERE ID = ?"
 
 	stmt, err := m.Conn.PrepareContext(ctx, query)
 	if err != nil {
