@@ -1,5 +1,5 @@
-NAME=micro-tool
-IMAGE_NAME=micro-tool/$(NAME)
+NAME=micro
+IMAGE_NAME=micro/$(NAME)
 GIT_COMMIT=$(shell git rev-parse --short HEAD)
 GIT_TAG=$(shell git describe --abbrev=0 --tags --always --match "v*")
 GIT_IMPORT=github.com/micro/micro/cmd
