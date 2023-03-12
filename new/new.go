@@ -319,7 +319,7 @@ func run(ctx *cli.Context) {
 				{"generate.go", tmpl.GenerateFile},
 				{"plugin.go", tmpl.Plugin},
 				{"client/" + alias + ".go", tmpl.WrapperAPI},
-				{"handler/" + alias + ".go", tmpl.HandlerAPI},
+				//{"handler/" + alias + ".go", tmpl.HandlerAPI},
 				{"proto/" + alias + "/" + alias + ".proto", tmpl.ProtoAPI},
 				{"Makefile", tmpl.Makefile},
 				{"Dockerfile", tmpl.DockerSRV},

@@ -15,7 +15,7 @@ build: proto
 .PHONY: build
 build:
 {{end}}
-	go build -o {{.Alias}}-{{.Type}} *.go
+	go build -o {{.Alias}}-{{.Type}} ./app/*.go
 
 .PHONY: test
 test:

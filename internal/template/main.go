@@ -21,7 +21,7 @@ func main() {
 	function.Init()
 
 	// Register Handler
-	function.Handle(new(handler.{{title .Alias}}))
+	function.Handle(new(rpc.{{title .Alias}}))
 
 	// Register Struct as Subscriber
 	function.Subscribe("{{.FQDN}}", new(subscriber.{{title .Alias}}))

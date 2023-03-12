@@ -14,7 +14,7 @@ message Message {
 }
 
 message Request {
-	string name = 1;
+	int64 id = 1;
 }
 
 message Response {
