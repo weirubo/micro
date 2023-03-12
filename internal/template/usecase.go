@@ -34,7 +34,7 @@ func (u *{{.Alias}}Usecase) Create(ctx context.Context, {{.Alias}} *domain.{{tit
 	return
 }
 
-func (u *{{.Alias}}Usecase) Update(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}, condition *domain.{{title .Alias}}) (rows int, err error) {
+func (u *{{.Alias}}Usecase) Update(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}, condition *domain.{{title .Alias}}) (rows int64, err error) {
 	rows, err = u.{{.Alias}}Repo.Update(ctx, {{.Alias}}, condition)
 	return
 }`

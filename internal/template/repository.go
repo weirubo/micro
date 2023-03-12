@@ -36,7 +36,7 @@ func (m *mysql{{title .Alias}}Repository) Create(ctx context.Context, {{.Alias}}
 	return
 }
 
-func (m *mysql{{title .Alias}}Repository) Update(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}, condition *domain.{{title .Alias}}) (int64, error) {
+func (m *mysql{{title .Alias}}Repository) Update(ctx context.Context, {{.Alias}} *domain.{{title .Alias}}, condition *domain.{{title .Alias}}) (rows int64, err error) {
 	rows, err = m.dbEngine.Update({{.Alias}}, condition)
 	return
 }`
