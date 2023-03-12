@@ -6,8 +6,8 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/monitor"
 	"github.com/micro/go-micro/util/log"
-	"github.com/weirubo/micro/monitor/handler"
-	pb "github.com/weirubo/micro/monitor/proto"
+	"github.com/weirubo/micro-tool/monitor/handler"
+	pb "github.com/weirubo/micro-tool/monitor/proto"
 )
 
 var (

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/weirubo/micro/cmd"
+	"github.com/weirubo/micro-tool/cmd"
 )
 
 func main() {

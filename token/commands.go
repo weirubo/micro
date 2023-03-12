@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/micro/cli"
-	"github.com/weirubo/micro/internal/token"
+	"github.com/weirubo/micro-tool/internal/token"
 )
 
 func generate(ctx *cli.Context) {

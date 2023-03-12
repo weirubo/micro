@@ -7,8 +7,8 @@ import (
 
 	"github.com/micro/go-micro/metadata"
 	"github.com/pkg/errors"
-	dns "github.com/weirubo/micro/network/dns/proto/dns"
-	"github.com/weirubo/micro/network/dns/provider"
+	dns "github.com/weirubo/micro-tool/network/dns/proto/dns"
+	"github.com/weirubo/micro-tool/network/dns/provider"
 )
 
 // DNS handles incoming gRPC requests

@@ -19,7 +19,7 @@ import (
 	"github.com/micro/go-micro/runtime/service/handler"
 	pb "github.com/micro/go-micro/runtime/service/proto"
 	"github.com/micro/go-micro/util/log"
-	"github.com/weirubo/micro/runtime/notifier"
+	"github.com/weirubo/micro-tool/runtime/notifier"
 )
 
 const (

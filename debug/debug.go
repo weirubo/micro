@@ -9,7 +9,7 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/debug/log"
 	dbg "github.com/micro/go-micro/debug/service"
-	"github.com/weirubo/micro/debug/web"
+	"github.com/weirubo/micro-tool/debug/web"
 )
 
 const (

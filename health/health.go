@@ -10,7 +10,7 @@ import (
 	"github.com/micro/go-micro/client"
 	proto "github.com/micro/go-micro/debug/service/proto"
 	"github.com/micro/go-micro/util/log"
-	mcli "github.com/weirubo/micro/cli"
+	mcli "github.com/weirubo/micro-tool/cli"
 	"golang.org/x/net/context"
 )
 

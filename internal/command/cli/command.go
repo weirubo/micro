@@ -21,7 +21,7 @@ import (
 
 	proto "github.com/micro/go-micro/debug/service/proto"
 
-	dns "github.com/weirubo/micro/network/dns/proto/dns"
+	dns "github.com/weirubo/micro-tool/network/dns/proto/dns"
 
 	"github.com/olekukonko/tablewriter"
 	"github.com/serenize/snaker"

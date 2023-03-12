@@ -1,4 +1,4 @@
-module github.com/weirubo/micro
+module github.com/weirubo/micro-tool
 
 go 1.13
 

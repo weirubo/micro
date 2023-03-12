@@ -3,7 +3,7 @@ package store
 import (
 	"fmt"
 
-	"github.com/weirubo/micro/plugin"
+	"github.com/weirubo/micro-tool/plugin"
 )
 
 var (

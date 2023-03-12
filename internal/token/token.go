@@ -13,7 +13,7 @@ import (
 
 	"github.com/hako/branca"
 	"github.com/pborman/uuid"
-	p "github.com/weirubo/micro/internal/token/proto"
+	p "github.com/weirubo/micro-tool/internal/token/proto"
 )
 
 type Token struct {

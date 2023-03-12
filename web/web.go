@@ -31,10 +31,10 @@ import (
 	"github.com/micro/go-micro/sync/lock/memory"
 	"github.com/micro/go-micro/util/log"
 	"github.com/serenize/snaker"
-	"github.com/weirubo/micro/internal/handler"
-	"github.com/weirubo/micro/internal/helper"
-	"github.com/weirubo/micro/internal/stats"
-	"github.com/weirubo/micro/plugin"
+	"github.com/weirubo/micro-tool/internal/handler"
+	"github.com/weirubo/micro-tool/internal/helper"
+	"github.com/weirubo/micro-tool/internal/stats"
+	"github.com/weirubo/micro-tool/plugin"
 )
 
 var (

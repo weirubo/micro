@@ -12,7 +12,7 @@ import (
 	"github.com/micro/go-micro/client"
 	cbytes "github.com/micro/go-micro/codec/bytes"
 	"github.com/micro/go-micro/config/cmd"
-	clic "github.com/weirubo/micro/internal/command/cli"
+	clic "github.com/weirubo/micro-tool/internal/command/cli"
 )
 
 type exec func(*cli.Context, []string) ([]byte, error)

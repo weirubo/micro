@@ -15,7 +15,7 @@ import (
 	"github.com/patrickmn/go-cache"
 	"github.com/pquerna/otp"
 	"github.com/pquerna/otp/totp"
-	"github.com/weirubo/micro/internal/token"
+	"github.com/weirubo/micro-tool/internal/token"
 	"gopkg.in/gomail.v2"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/micro/go-micro/monitor"
-	pb "github.com/weirubo/micro/monitor/proto"
+	pb "github.com/weirubo/micro-tool/monitor/proto"
 )
 
 type Monitor struct {

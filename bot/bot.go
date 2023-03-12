@@ -17,7 +17,7 @@ import (
 	"github.com/micro/go-micro/agent/command"
 	"github.com/micro/go-micro/agent/input"
 	"github.com/micro/go-micro/util/log"
-	botc "github.com/weirubo/micro/internal/command/bot"
+	botc "github.com/weirubo/micro-tool/internal/command/bot"
 
 	proto "github.com/micro/go-micro/agent/proto"
 

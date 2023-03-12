@@ -13,8 +13,8 @@ import (
 
 	// include usage
 
-	"github.com/weirubo/micro/internal/update"
-	_ "github.com/weirubo/micro/internal/usage"
+	"github.com/weirubo/micro-tool/internal/update"
+	_ "github.com/weirubo/micro-tool/internal/usage"
 )
 
 type initNotifier struct {
