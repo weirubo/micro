@@ -14,7 +14,7 @@ message Message {
 }
 
 message Request {
-	int64 id = 1;
+	string name = 1;
 }
 
 message Response {
@@ -37,7 +37,7 @@ message Message {
 }
 
 message Request {
-	string id = 1;
+	string name = 1;
 }
 
 message Response {

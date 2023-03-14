@@ -1,6 +1,6 @@
-# Micro [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![GoDoc](https://godoc.org/github.com/micro/micro?status.svg)](https://godoc.org/github.com/micro/micro) [![Travis CI](https://travis-ci.org/micro/micro.svg?branch=master)](https://travis-ci.org/micro/micro) [![Go Report Card](https://goreportcard.com/badge/micro/micro)](https://goreportcard.com/report/github.com/micro/micro)
+# Micro-tool [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![GoDoc](https://godoc.org/github.com/micro/micro?status.svg)](https://godoc.org/github.com/weirubo/micro-tool) [![Travis CI](https://travis-ci.org/micro/micro.svg?branch=master)](https://travis-ci.org/micro/micro) [![Go Report Card](https://goreportcard.com/badge/micro/micro)](https://goreportcard.com/report/github.com/micro/micro)
 
-Micro is a runtime for microservice development.
+Micro is a runtime for microservice development. Micro-tool is built on micro.
 
 ## Overview
 
@@ -58,16 +58,16 @@ From source
 # enable go modules
 export GO111MODULE=on
 
-go get github.com/micro/micro
+go get github.com/weirubo/micro-tool
 ```
 
-Docker image
+~~Docker image~~
 
 ```
 docker pull micro/micro
 ```
 
-Latest release binaries
+~~Latest release binaries~~
 
 ```
 # MacOS
@@ -85,7 +85,7 @@ powershell -Command "iwr -useb https://micro.mu/install.ps1 | iex"
 Boot the entire development environment locally
 
 ```
-micro --local
+micro-tool --local
 ```
 
 ### Create a service
@@ -95,16 +95,16 @@ micro --local
 export GO111MODULE=on
 
 # generate a service (follow instructions in output)
-micro new example
+micro-tool new example
 
 # run the service
 go run example/main.go
 
 # list services
-micro list services
+micro-tool list services
 
 # call a service
-micro call go.micro.srv.example Example.Call '{"name": "John"}'
+micro-tool call go.micro.srv.example Example.Call '{"name": "John"}'
 ```
 
 ## Usage
@@ -112,7 +112,7 @@ micro call go.micro.srv.example Example.Call '{"name": "John"}'
 See all the options
 
 ```
-micro --help
+micro-tool --help
 ```
 
 See the [docs](https://micro.mu/docs/) for detailed information on the architecture, installation and use of the platform.

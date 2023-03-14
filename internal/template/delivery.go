@@ -150,7 +150,16 @@ type {{title .Alias}} struct{}
 // Call is a single request handler called via client.Call or the generated client code
 func (e *{{title .Alias}}) Call(ctx context.Context, req *{{.Alias}}.Request, rsp *{{.Alias}}.Response) error {
 	log.Log("Received {{title .Alias}}.Call request")
-	rsp.Msg = "Hello " + req.Id
+	example := &domain.Example{
+		Name: "test",
+	}
+	repo := mysql.NewMysqlExampleRepository(internal.MysqlConn())
+	ucase := usecase.NewExampleUsecase(repo)
+	err := ucase.Create(ctx, example)
+	if err != nil {
+		log.Errorf("Call() || req=%+v || example=%+v || err=%v", req, example, err)
+		return err
+	}
 	return nil
 }
 

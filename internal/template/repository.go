@@ -15,10 +15,9 @@ type mysql{{title .Alias}}Repository struct {
 }
 
 // NewMysql{{title .Alias}}Repository will create an object that represent the article.Repository interface
-func NewMysql{{title .Alias}}Repository() domain.{{title .Alias}}Repository {
-    e, _ := xorm.NewEngine("mysql", "root:123@/test?charset=utf8")
+func NewMysql{{title .Alias}}Repository(engine *xorm.Engine) domain.{{title .Alias}}Repository {
 	return &mysql{{title .Alias}}Repository{
-		dbEngine: e,
+		dbEngine: engine,
 	}
 }
 

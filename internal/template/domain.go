@@ -11,9 +11,9 @@ import (
 // {{title .Alias}} is representing the Article data struct
 type {{title .Alias}} struct {
 	Id        int64 
-	Title     string 
-	UpdatedAt time.Time 
-	CreatedAt time.Time 
+	Name      string 
+	Created   int
+	Updated   int
 }
 
 // {{title .Alias}}Usecase represent the article's usecases
