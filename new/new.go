@@ -291,6 +291,7 @@ func run(ctx *cli.Context) {
 				{alias + "/usecase/" + alias + "_usecase.go", tmpl.UsecaseSRV},
 				{alias + "/delivery/http/" + alias + "_handler.go", tmpl.DeliveryHttpHandlerSRV},
 				{alias + "/delivery/rpc/" + alias + "_handler.go", tmpl.DeliveryRpcHandlerSRV},
+				{alias + "/internal/mysql.go", tmpl.InternalMysql},
 			},
 			Comments: []string{
 				"\ndownload protobuf for micro:\n",
