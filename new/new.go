@@ -156,7 +156,7 @@ func run(ctx *cli.Context) {
 	}
 
 	// set the command
-	command := fmt.Sprintf("micro-tool new %s", dir)
+	command := fmt.Sprintf("GO111MODULE=on micro-tool new %s", dir)
 	if len(namespace) > 0 {
 		command += " --namespace=" + namespace
 	}
