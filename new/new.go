@@ -156,7 +156,7 @@ func run(ctx *cli.Context) {
 	}
 
 	// set the command
-	command := fmt.Sprintf("GO111MODULE=on micro-tool new %s", dir)
+	command := fmt.Sprintf("GO111MODULE=on micro-tool new %s --gopath=false", dir)
 	if len(namespace) > 0 {
 		command += " --namespace=" + namespace
 	}
@@ -289,7 +289,7 @@ func run(ctx *cli.Context) {
 				{"domain/" + alias + ".go", tmpl.DomainSRV},
 				{alias + "/repository/mysql/mysql_" + alias + ".go", tmpl.RepositoryMysqlSRV},
 				{alias + "/usecase/" + alias + "_usecase.go", tmpl.UsecaseSRV},
-				{alias + "/delivery/http/" + alias + "_handler.go", tmpl.DeliveryHttpHandlerSRV},
+				//{alias + "/delivery/http/" + alias + "_handler.go", tmpl.DeliveryHttpHandlerSRV},
 				{alias + "/delivery/rpc/" + alias + "_handler.go", tmpl.DeliveryRpcHandlerSRV},
 				{alias + "/internal/mysql.go", tmpl.InternalMysql},
 			},
@@ -365,7 +365,7 @@ func run(ctx *cli.Context) {
 	}
 
 	// set gomodule
-	if useGoModule == "on" || useGoModule == "auto" {
+	if useGoModule == "on" || useGoModule == "auto" || useGoModule == "" {
 		c.Files = append(c.Files, file{"go.mod", tmpl.Module})
 	}
 

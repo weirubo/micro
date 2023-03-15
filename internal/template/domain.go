@@ -5,7 +5,6 @@ var (
 
 import (
 	"context"
-	"time"
 )
 
 // {{title .Alias}} is representing the Article data struct

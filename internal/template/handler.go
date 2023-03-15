@@ -33,7 +33,7 @@ type {{title .Alias}} struct{}
 // Call is a single request handler called via client.Call or the generated client code
 func (e *{{title .Alias}}) Call(ctx context.Context, req *{{.Alias}}.Request, rsp *{{.Alias}}.Response) error {
 	log.Log("Received {{title .Alias}}.Call request")
-	rsp.Msg = "Hello " + req.Id
+	rsp.Msg = "Hello " + req.Name
 	return nil
 }
 

@@ -95,7 +95,7 @@ micro-tool --local
 export GO111MODULE=on
 
 # generate a service (follow instructions in output)
-micro-tool new example
+micro-tool new --gopath=false example
 
 # run the service
 go run example/main.go

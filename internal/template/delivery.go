@@ -139,6 +139,10 @@ func getStatusCode(err error) int {
 
 import (
 	"context"
+	"example/domain"
+	"example/example/internal"
+	"example/example/repository/mysql"
+	"example/example/usecase"
 
 	"github.com/micro/go-micro/util/log"
 
