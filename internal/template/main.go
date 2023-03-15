@@ -21,7 +21,7 @@ func main() {
 	function.Init()
 
 	// Register Handler
-	function.Handle(new(rpc.{{title .Alias}}))
+	function.Handle(new(handler.{{title .Alias}}))
 
 	// Register Struct as Subscriber
 	function.Subscribe("{{.FQDN}}", new(subscriber.{{title .Alias}}))
@@ -55,7 +55,7 @@ func main() {
 	service.Init()
 
 	// Register Handler
-	{{.Alias}}.Register{{title .Alias}}Handler(service.Server(), new(handler.{{title .Alias}}))
+	{{.Alias}}.Register{{title .Alias}}Handler(service.Server(), new(rpc.{{title .Alias}}))
 
 	// Register Struct as Subscriber
 	micro.RegisterSubscriber("{{.FQDN}}", service.Server(), new(subscriber.{{title .Alias}}))
