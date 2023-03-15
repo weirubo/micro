@@ -279,7 +279,7 @@ func run(ctx *cli.Context) {
 			Files: []file{
 				{"app/main.go", tmpl.MainSRV},
 				{"generate.go", tmpl.GenerateFile},
-				{"plugin.go", tmpl.Plugin},
+				{"app/plugin.go", tmpl.Plugin},
 				{"handler/" + alias + ".go", tmpl.HandlerSRV},
 				{"subscriber/" + alias + ".go", tmpl.SubscriberSRV},
 				{"proto/" + alias + "/" + alias + ".proto", tmpl.ProtoSRV},
